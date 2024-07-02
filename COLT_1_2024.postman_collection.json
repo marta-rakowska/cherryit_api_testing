@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "7b05009d-7f08-4398-abdc-c9c77c54654e",
+		"name": "COLT 1/2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28940952"
+	},
+	"item": [
+		{
+			"name": "Board",
+			"item": [
+				{
+					"name": "Create a Board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/?name=Board_1&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Board_1"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/{{board}}?key={{key}}&token={{token}}&id={{board}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{board}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "id",
+									"value": "{{board}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Card",
+			"item": [
+				{
+					"name": "Create a new Card",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/cards?idList={{list}}&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{list}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List",
+			"item": [
+				{
+					"name": "Create a new List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists?name=List_1&idBoard={{board}}&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "List_1"
+								},
+								{
+									"key": "idBoard",
+									"value": "{{board}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Checklist",
+			"item": [
+				{
+					"name": "Create a Checklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists?idCard={{card}}&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists"
+							],
+							"query": [
+								{
+									"key": "idCard",
+									"value": "{{card}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Checklist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Checklist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"667b1d089029e9e65e4d52b1\",\n    \"name\": \"Checklist_1\",\n    \"idBoard\": \"667b0109663dec19cc38c2fe\",\n    \"idCard\": \"667b03d5bb068b859396a088\",\n    \"pos\": 16384,\n    \"checkItems\": [],\n    \"limits\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get field on a Checklist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/pos?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"pos"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update field on a Checklist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/pos?value=1991623&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"pos"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "1991623"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the Board the Checklist is on",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/board?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"board"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the Card a Checklist is on",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/cards?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Checkitems on a Checklist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/checkItems?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"checkItems"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Checkitem on Checklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/checkItems?name=Checkitem_1&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"checkItems"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Checkitem_1"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Checkitem on a Checklist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/checkItems/{{checkitem}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"checkItems",
+								"{{checkitem}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Checkitem from Checklist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}/checkItems/{{checkitem2}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}",
+								"checkItems",
+								"{{checkitem2}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Checklist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/checklists/{{checklist}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"checklists",
+								"{{checklist}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
