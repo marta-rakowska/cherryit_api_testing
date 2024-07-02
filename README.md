@@ -9,5 +9,15 @@ Topics covered:
 - DevTools
 
 
-The COLT_1_2024.postman_collection.json file contains a collection of API tests exported from Postman. The testing scope are checklists in Trello API (documentation available [here](https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions))
+The COLT_1_2024.postman_collection.json file contains a collection of API tests exported from Postman. The testing scope are checklists in Trello API (documentation available [here](https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions)).
+
+To run the tests it's necessary to generate a token and create an environment with the following variables:
+- baseURL,
+- key,
+- token,
+- board,
+- card,
+- list,
+- checklist,
+- checkitem.
 
